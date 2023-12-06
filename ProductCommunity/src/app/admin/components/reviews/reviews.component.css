@@ -1,0 +1,13 @@
+.container{
+    padding-top: 2vh;
+}
+.buttons{
+    display:flex;
+    flex-direction:row;
+}
+.approve{
+    margin-right:2%;
+}
+.card{
+    margin-bottom:2vh;
+}

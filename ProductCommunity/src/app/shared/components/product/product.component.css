@@ -1,0 +1,28 @@
+.product{
+    padding:10vh;
+    height:auto;
+    width:100%;
+    display:flex;
+    flex:1;
+    flex-direction:row;
+    /* background: #333333; */
+    /* color: white; */
+}
+.left{
+    padding-right: 10%;
+    width:50%
+}
+.right{
+    width:50%
+}
+.container{
+    margin-bottom:3vh;
+}
+.reviews{
+    padding:10px;
+    border:2px solid white;
+    margin-bottom:2px;
+}
+.avergerating{
+    border:1px solid white;
+}

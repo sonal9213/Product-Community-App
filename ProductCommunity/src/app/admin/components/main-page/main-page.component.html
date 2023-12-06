@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Products</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <app-header></app-header>
+        <div class="button">
+            <button type="button" class="btn btn-success" style="margin-right:10px;" (click)="reviewPage()">View New Reviews</button>
+            <button type="button" class="btn btn-success" (click)="addProductForm()">Add Product</button>
+        </div>
+        <div class="midpage">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let product of results">
+                <div class="card  " [routerLink]="['/product', product.productCode]" >
+                    <img src={{product.img}} alt="Card Image" class="card-img-top" width="150" height="250">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ product.productName }}</h5>
+                      <div class="card-detail">
+                        <div class="left-section">
+                            <p class="card-text">{{ product.brand}}</p>
+                        </div>
+                        <div class="right-section">
+                            <h5 class="card-text">{{ product.price}}/-</h5>
+                        </div>
+                      </div>
+                      <div class="button">
+                        <button type="button" class="btn btn-danger" (click)="deleteProduct(product.productCode)">Delete Product</button>
+                      </div>
+                      
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <app-footer></app-footer> -->
+
+    </body>
+</html>
+
+
+

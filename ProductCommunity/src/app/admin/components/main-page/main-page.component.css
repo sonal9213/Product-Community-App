@@ -1,0 +1,33 @@
+.midpage{
+    padding:5vh;
+}
+.button{
+    margin-top: 2vh;
+    margin-right:5%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    
+}
+.card{
+  margin-bottom: 4vh;
+}
+.card-detail {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .left-section {
+    flex: 1;
+    /* Additional styling for the left section */
+  }
+  
+  .right-section {
+    flex: 1;
+    /* Additional styling for the right section */
+  }
+  
+
+
+
+  

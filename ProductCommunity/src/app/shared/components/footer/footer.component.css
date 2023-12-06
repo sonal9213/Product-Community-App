@@ -1,0 +1,32 @@
+/* styles.css */
+footer {
+    height: 30vh; /* Sets the height to 40% of the viewport height */
+    display: flex;
+  }
+  
+  .footer-option {
+    flex: 1; /* Distributes available space equally among all options */
+    
+    /* background-color:rgb(89, 211, 89); */
+    color: #ffffff;
+    margin-left:20px;
+    margin-right:20px;
+    /* Add your styles for each statistics option */
+  }
+  
+  .card{
+    background-color:rgb(89, 211, 89);
+  }
+  /* Additional styles for responsiveness */
+  @media screen and (max-width: 768px) {
+    /* Adjust the layout for smaller screens */
+    footer {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .footer-option {
+      width: 100%;
+    }
+  }
+  

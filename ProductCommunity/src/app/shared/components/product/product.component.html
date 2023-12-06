@@ -1,0 +1,78 @@
+<app-header></app-header>
+<div class="product">
+  <div class="left">
+    <img src={{result.img}} alt="Card Image" class="card-img-top" width="400" height="700">
+  </div>
+  <div class="right">
+    <h2 class="card-title"> {{ result.productName }}</h2>
+    <h5 class="card-productCode">{{ result.productCode }}</h5>
+    <h5 class="card-brand">{{ result.brand }} </h5>
+    <h5 class="card-description"> {{ result.description }}</h5>
+    <div class="avergerating">
+      <h5 class="card-Rating"> Average Ratings {{ result.rating }}</h5>
+    </div>
+    <hr>
+    <h5 class="card-price">Rs. {{ result.price }}/-</h5>
+
+
+
+    <hr>
+    <h4>Reviews</h4>
+
+    <h5>Total Reviews- {{countReview}}</h5>
+    <h5>Average Rating- {{average}}</h5>
+    <div class="container">
+      <form [formGroup]="Review" (ngSubmit)="addReview()">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="heading">Heading</label>
+              <input type="text" class="form-control" id="heading" placeholder="Enter heading"
+                formControlName="heading">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="rating">Rating</label>
+              <select class="form-control" id="rating" formControlName="rating">
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Enter message"
+                formControlName="msg"></textarea>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <hr>
+    <div class="reviews" *ngFor="let review of result.reviews">
+      <div class="review" *ngIf="review.approve">
+        <h5>Review By {{username}}</h5>
+        <h6 class="review-heading">{{ review.heading }}</h6>
+        <h6 class="review-heading">Rating: {{ review.rating }}</h6>
+        <p class="review-msg">{{ review.msg }}</p>
+      </div>
+      <hr>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+</div>

@@ -1,0 +1,31 @@
+.midpage{
+    padding:5vh;
+}
+.wid{
+  width:auto;
+}
+.avergerating{
+  border:1px solid black;
+  padding:6px;
+  margin-top:5px;
+}
+.card-detail {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card{
+    margin-bottom:2vh;
+  }
+  .left-section {
+    flex: 1;
+    /* Additional styling for the left section */
+  }
+  
+  .right-section {
+    flex: 1;
+    /* Additional styling for the right section */
+  }
+  .container{
+    padding-top: 4vh;
+    
+}

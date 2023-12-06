@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div *ngIf="resultLength > 0; else elseBlock" >
+            <div class="col-md-4" *ngFor="let review of results">
+                <div class="card" >
+
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{review.heading}}</h5>
+                            <h6>User Name: {{review.userName}}</h6>
+                            <h6>Review Code: {{review.reviewCode}}</h6>
+                            <h6>Product Code: {{review.productCode}}</h6>
+                            <h6>Rating: {{review.rating}}</h6>
+                            <p class="card-text">{{review.msg}}</p>
+                            <div class="buttons">
+                                <div class="approve" class="btn btn-primary" (click)="approve(review.reviewCode)">
+                                    Approve</div>
+                                <div class="decline" class="btn btn-primary" (click)="delete(review.reviewCode)">Decline
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #elseBlock >
+            <div style="border:2px solid black">
+                <h1>No New Reviews Available</h1>
+                <div class="approve" class="btn btn-primary" (click)="mainPage()" >
+                    Back to Main Page</div>
+            </div>
+           
+        </ng-template>
+
+
+    </div>
+</div>

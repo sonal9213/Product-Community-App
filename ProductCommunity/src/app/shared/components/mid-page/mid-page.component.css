@@ -1,0 +1,42 @@
+/* styles.css */
+.midPage {
+    height:60vh;
+    display: flex;
+    background-color: #333333;
+  }
+  .left-content{
+    color:wheat;
+    text-align: center;
+    /* display:flex;
+    flex-direction: col; */
+
+  }
+  
+  .leftDivision {
+    flex: 1;
+    margin-top:10vh;
+  }
+  
+  .rightDivision {
+    flex: 1;
+    /* Add your styles for the right division */
+  }
+  
+  .rightDivision img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Additional styles for responsiveness */
+  @media screen and (max-width: 768px) {
+    /* Adjust the layout for smaller screens */
+    .midPage {
+      flex-direction: column;
+    }
+  
+    .leftDivision,
+    .rightDivision {
+      width: 100%;
+    }
+  }
+  

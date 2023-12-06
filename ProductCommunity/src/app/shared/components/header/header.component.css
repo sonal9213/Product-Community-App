@@ -1,0 +1,52 @@
+
+header {
+    height: 20vh; /* Sets the height to 20% of the viewport height */
+    width:100%;
+    display: flex;
+    margin:0px;
+    padding: 0px;
+    
+  }
+  
+  .header-left {
+    padding:20px;
+    width: 60%; /* Sets the left section width to 60% */
+    background-color: #333333;
+    color: #ffffff;
+    /* Add your styles for the left section of the header */
+  }
+  
+  .header-right {
+    padding:20px;
+    text-align: right;
+    margin-top:0px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right:20px;
+    width: 40%; /* Sets the right section width to 40% */
+    background-color: #333333;
+    color: #ffffff;
+    /* Add your styles for the right section of the header */
+  }
+  .login-button{
+
+    padding-right: 4%;
+  }
+  .title{
+    color: rgb(89, 211, 89);
+  }
+  
+  /* Additional styles for responsiveness */
+  @media screen and (max-width: 768px) {
+    /* Adjust the layout for smaller screens */
+    header {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .header-left,
+    .header-right {
+      width: 100%;
+    }
+  }
+  

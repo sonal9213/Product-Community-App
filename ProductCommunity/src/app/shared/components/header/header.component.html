@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<header>
+    <div class="header-left">
+       <h1>Shopa<span class="title">holics</span> </h1>
+    </div>
+    <div class="header-right">
+        <div class="login-button" *ngIf="isLoggedIn==null ;else elseBlock" ><button type="button" class="btn btn-success" (click)="loginPage()">Login</button></div>
+        <ng-template #elseBlock >
+            <div class="login-button" style="padding-top:10px;"> <h5>{{name}}</h5></div>
+             
+          </ng-template>
+          
+        <div class="register-button" *ngIf="isLoggedIn==null ;else elseBlocked" ><button type="button" class="btn btn-success" (click)="registerPage()">Register</button></div>
+        <ng-template #elseBlocked >
+            <div class="login-button" style="padding-top:10px;"><button type="button" class="btn btn-success" (click)="logout()">Log Out</button></div>
+             
+          </ng-template>
+        
+        
+    </div>
+  </header>
